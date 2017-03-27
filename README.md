@@ -54,27 +54,20 @@ When the program is run, the following prompt is obtained:
  1 for Manual Configuration
  2 for auto-configuration 
  ```
-If you choose 1, your next prompt should be:
-``` Enter IP addresses of routers to configure. Enter 'done' when finished
-```
+If you choose 1, your next prompt should be: ``` Enter IP addresses of routers to configure. Enter 'done' when finished ```
 Type the IP addresses with an Enter after every IP address and 'done' when finished.
 
-If you choose 2, your next prompt would be: 
-``` Enter IP file name and extension: 
-```
+
+If you choose 2, your next prompt would be: ``` Enter IP file name and extension: ```
 Enter the filename of the file that contains the IP addresses
 
-If all went well, your terminal should now display the success code:
-``` [SUCCESS] All devices are reachable.
-```
 
-Then there would be a prompt to enter the filename of the file that contains username and password:
-``` Enter filename containing username and password:
-```
+If all went well, your terminal should now display the success code: ``` [SUCCESS] All devices are reachable.```
 
-After validation of this file, the program prompts for filename of file that contains the commands:
-``` Enter filename of the file containing commands:
-```
+
+Then there would be a prompt to enter the filename of the file that contains username and password: ``` Enter filename containing username and password: ```
+
+After validation of this file, the program prompts for filename of file that contains the commands: ``` Enter filename of the file containing commands: ```
 
 The program then opens an SSH connection to each IP address and executes the commands in the file.
 
