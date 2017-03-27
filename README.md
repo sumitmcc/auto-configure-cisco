@@ -10,10 +10,7 @@ The program mainly consists of 3 parts:
 The user has a choice to provide IPs manually or parse from a file for larger number of IPs. The program checks for validity of IP addresses. If any of them is of invalid format, inform the user to correct the specific IP and restart the program. Once all the IPs are confirmed to be of valid format, they are pinged individually to check if they are reachable. Any unreable IP would be informed to the user to be corrected. Once all the IP addresses are confirmed to be reachable, the next step is:
 
 2. Provide Username and Password:
-This functionality is currently restricted to parsing from a text file only. *(I might, in future, add an option for user to manually type the username and password)* The user is prompted to enter the filename that contains the username and password. Note that the program requires the username and password to be formatted in the textfile as:
-
-```  username,password
-```
+This functionality is currently restricted to parsing from a text file only. *(I might, in future, add an option for user to manually type the username and password)* The user is prompted to enter the filename that contains the username and password. Note that the program requires the username and password to be formatted in the textfile as: ``` username,password ```
 The program then checks if the given file exists. If not, the user is informed of the error. Once validated, the program proceeds to the next step. Note that the actual authentication of the username and password does not occur at this step.
 
 3. Providing commands to be executed:
