@@ -11,7 +11,8 @@ The user has a choice to provide IPs manually or parse from a file for larger nu
 
 2. Provide Username and Password:
 This functionality is currently restricted to parsing from a text file only. *(I might, in future, add an option for user to manually type the username and password)* The user is prompted to enter the filename that contains the username and password. Note that the program requires the username and password to be formatted in the textfile as:
-``` username,password
+
+```  username,password
 ```
 The program then checks if the given file exists. If not, the user is informed of the error. Once validated, the program proceeds to the next step. Note that the actual authentication of the username and password does not occur at this step.
 
@@ -19,14 +20,14 @@ The program then checks if the given file exists. If not, the user is informed o
 The program promps the user to enter the filename of the file that contains the commands to be executed in the router terminal. Note that the program requires that commands be written in a text file with one command per line and no indentation whatsoever. Also the last line needs to have a trailing newline. The existence of the file is validated and in case it is an invalid name, the user is informed of the invalidity. Once the filename is validated, the program continues to execute all the defined functions. Note again that, only the filename is validated at this step and not the actual commands in the file.
 
 4. Execution of the commands:
-The program opens an SSH connection for each IP address and executes the commands line-by-line. Invalid authentication is handld by the ```paramiko.AuthenticationException: ``` exception handler. Any invalid syntax is detected by the search for the term ```% Invalid input detected at``` in the terminal output using regular expressions.
+The program opens an SSH connection for each IP address and executes the commands line-by-line. Invalid authentication is handld by the ``` paramiko.AuthenticationException: ``` exception handler. Any invalid syntax is detected by the search for the term ``` % Invalid input detected at``` in the terminal output using regular expressions.
 
 ## Getting Started
 
 Download the program and place it into desired folder. 
 
-If you're using Linux/MAC OS, open terminal and browse to the downloaded folder and run ```python ssh_config.py```.
-if you're using windows, make sure you have Python2.7 set up (See [Python installation on windows](http://stackoverflow.com/a/21373411/7586417) ). Open command prompt and browse to the installed folder and run ```python ssh_config.py```
+If you're using Linux/MAC OS, open terminal and browse to the downloaded folder and run ``` python ssh_config.py ```.
+if you're using windows, make sure you have Python2.7 set up (See [Python installation on windows](http://stackoverflow.com/a/21373411/7586417) ). Open command prompt and browse to the installed folder and run ``` python ssh_config.py ```
 
 Make sure you have the following files:
 * File containing the IP addresses (If you choose autoconfigure)
@@ -52,30 +53,30 @@ Your configuration would look something like this:
 
 When the program is run, the following prompt is obtained:
 
-```Do you want to configure manually or use auto-configuration file? Type:
+``` Do you want to configure manually or use auto-configuration file? Type:
  1 for Manual Configuration
  2 for auto-configuration 
  ```
 If you choose 1, your next prompt should be:
-```Enter IP addresses of routers to configure. Enter 'done' when finished
+``` Enter IP addresses of routers to configure. Enter 'done' when finished
 ```
 Type the IP addresses with an Enter after every IP address and 'done' when finished.
 
 If you choose 2, your next prompt would be: 
-```Enter IP file name and extension: 
+``` Enter IP file name and extension: 
 ```
 Enter the filename of the file that contains the IP addresses
 
 If all went well, your terminal should now display the success code:
-```[SUCCESS] All devices are reachable.
+``` [SUCCESS] All devices are reachable.
 ```
 
 Then there would be a prompt to enter the filename of the file that contains username and password:
-```Enter filename containing username and password:
+``` Enter filename containing username and password:
 ```
 
 After validation of this file, the program prompts for filename of file that contains the commands:
-```Enter filename of the file containing commands:
+``` Enter filename of the file containing commands:
 ```
 
 The program then opens an SSH connection to each IP address and executes the commands in the file.
