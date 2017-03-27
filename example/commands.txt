@@ -1,0 +1,5 @@
+config terminal
+line vty 0 4
+no shut
+password python
+login
