@@ -158,7 +158,7 @@ Enter filename of the file containing commands: commands.txt
 
 ## Author
 
-* **Sumit Chachadi** *-sumitmal@buffalo.edu*
+* **Sumit Chachadi** -*sumitmal@buffalo.edu*
 
 ## License
 
